@@ -1,0 +1,29 @@
+
+* {
+    -fx-primary : #2A2E37;
+    -fx-secondary : #FFFF8D;
+    -fx-primarytext : #B2B2B2;
+    -fx-blue: #1976D2;
+    -fx-red: #FF0000;
+    -fx-color-1:#1976D2;
+    -fx-color-2:#363636;
+}
+
+.button{
+    -fx-text-fill: whitesmoke;
+    -fx-background-color: -fx-primary;
+    -fx-border-color: -fx-secondary;
+    -fx-border-radius: 20px;
+    -fx-background-radius: 20px;
+    -fx-font-size: 12pt;
+}
+
+.text-field{
+    -fx-font-size : 12pt;
+    -jfx-focus-color: -fx-secondary;
+}
+
+
+
+
+

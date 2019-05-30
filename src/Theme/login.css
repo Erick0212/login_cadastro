@@ -1,0 +1,67 @@
+* {
+    -fx-primary : #2A2E37;
+    -fx-secondary : #FFFF8D;
+    -fx-primarytext : #B2B2B2;
+    -fx-blue: #1976D2;
+    -fx-red: #FF0000;
+    -fx-color-1:#1976D2;
+    -fx-color-2:#363636;
+}
+
+
+.button:hover{
+    -fx-text-fill: black;
+    -fx-background-color: whitesmoke;
+}
+
+.button{
+    -fx-text-fill: whitesmoke;
+    -fx-background-color: -fx-primary;
+    -fx-border-color: -fx-secondary;
+    -fx-border-radius: 20px;
+    -fx-background-radius: 20px;
+    -fx-font-size: 12pt;
+}
+
+.text-field{
+    -fx-font-size : 12pt;
+    -jfx-focus-color: -fx-secondary;
+}
+
+.checkbox-main{
+    -fx-text-fill: whitesmoke; 
+    -jfx-checked-color: -fx-primary;
+    -fx-font-size: 10pt;
+}
+
+.menu-button:hover{
+    -fx-text-fill: black;
+    -fx-background-color: whitesmoke;
+}
+
+.menu-button, .menu-button .context-menu {
+    -fx-text-fill: whitesmoke;
+    -fx-background-color: -fx-primary;
+    -fx-border-color: -fx-secondary;
+    -fx-border-radius: 20px;
+    -fx-background-radius: 20px;
+    -fx-font-size: 12pt; 
+}
+.menu-button .menu-item{
+    -fx-text-fill: whitesmoke;
+    -fx-background-color: -fx-primary;
+    -fx-border-radius: 20px;
+    -fx-background-radius: 20px;
+    -fx-font-size: 12pt; 
+}
+
+.menu-item:hover{
+    -fx-font-size : 12pt;
+    -jfx-focus-color: -fx-secondary;
+}
+    
+.menu-button .menu-item .label {
+    -fx-text-fill: whitesmoke ;
+}
+
+
