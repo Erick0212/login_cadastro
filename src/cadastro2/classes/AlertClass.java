@@ -38,7 +38,7 @@ public class AlertClass {
 
     public static void AlertPersonType() {
         Alert a = new Alert(Alert.AlertType.ERROR,"Dois tipos de usuários selecionado");
-        a.setTitle("Algo de errado não esta certo!");
+        a.setTitle(ALERT_TITLE);
         a.setContentText("Selecione somente um tipo de usuário!");
         a.show();    
     }
@@ -46,12 +46,19 @@ public class AlertClass {
     public static void AlertDadosInvalidos() {
         Alert a = new  Alert(Alert.AlertType.INFORMATION);
         a.setHeaderText("Entrada de dados inválida!");
-        a.setTitle("Verifique os dados fornecidos.");
+        a.setTitle(ALERT_TITLE);
         a.show();    }
 
     public static void AlertTermos() {
         Alert termos = new Alert(Alert.AlertType.INFORMATION,"Aceite os termos de uso para prosseguir.");
-        termos.setTitle("Algo de errado não está certo!");
+        termos.setTitle(ALERT_TITLE);
         termos.setHeaderText("Os termos de uso da plataforma não foram aceitos!");
-        termos.show();    }
+        termos.show();    
+    }
+    
+    public static void AlertCadastrado(){
+        Alert termos = new Alert(Alert.AlertType.INFORMATION, "Cadastro efetuado com sucesso!");
+        termos.setTitle("Cadastro efetuado");
+        termos.show();        
+    }
 }

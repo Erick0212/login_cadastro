@@ -121,6 +121,8 @@ public class Funcoes {
     }
     
     
+    
+    
     /*public void abrirJanela(String caminho) throws IOException{
         //Funcoes.loadWindow(getClass().getResource("teste.fxml"), "teste scene", null);
         FXMLLoader loader = new FXMLLoader(getClass().getResource(caminho));

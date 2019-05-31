@@ -5,7 +5,7 @@
  */
 package Controller;
 
-//import static cadastro2.Utilitarios.verificaSenha;
+
 import cadastro2.classes.AlertClass;
 import cadastro2.classes.Cliente;
 import cadastro2.classes.Empresa;
@@ -15,7 +15,6 @@ import java.util.ResourceBundle;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
-import javafx.scene.control.Alert;
 import javafx.scene.control.Button;
 import javafx.scene.control.CheckBox;
 import javafx.scene.control.PasswordField;
@@ -103,6 +102,8 @@ public class CadastroController implements Initializable {
         }else{
             AlertClass.AlertTermos();
         }
+        ((Stage)btnConfirma.getScene().getWindow()).hide();
+        AlertClass.AlertCadastrado();
         }
     
     @FXML
@@ -114,5 +115,5 @@ public class CadastroController implements Initializable {
     public void initialize(URL url, ResourceBundle rb) {
         // TODO
     }    
-    
+       
 }
