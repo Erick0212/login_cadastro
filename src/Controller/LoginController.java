@@ -5,6 +5,7 @@
  */
 package Controller;
 
+import cadastro2.classes.AlertClass;
 import cadastro2.classes.Funcoes;
 import java.io.IOException;
 import java.net.URL;
@@ -28,7 +29,6 @@ import login.Cadastro2;
  * @author Erick Nagoski
  */
 public class LoginController implements Initializable {
-
     @FXML
     private Button btnEntrar;
     @FXML
@@ -48,12 +48,6 @@ public class LoginController implements Initializable {
         // TODO
     }    
     
-    
-    private void btnCanelar(ActionEvent event){
-        
-        
-    }
-    
     @FXML
     private void CadastroAction(ActionEvent event) throws IOException {
         //Funcoes.loadWindow(getClass().getResource("teste.fxml"), "teste scene", null);
@@ -69,10 +63,14 @@ public class LoginController implements Initializable {
         
     }
 
-    
     @FXML
     void btnEntrar(ActionEvent event) {
-        String email = txtEmail.getText();
+        String email  = "";
+        if(Funcoes.validarEmail(txtEmail)){
+            email = txtEmail.getText();
+        }else{
+            AlertClass.AlertEmail();
+        }   
         
         String senha = txtSenha.getText();
         

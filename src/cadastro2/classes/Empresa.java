@@ -11,23 +11,11 @@ import java.util.Objects;
  *
  * @author Erick Nagoski
  */
-public class Empresa {
-    private String nome;
+public class Empresa extends Pessoa{
     private long cnpj;
     private long cod_empresa;
-    private String senha;
-    private String telefone;
-    private String email;
-
-    public String getNome() {
-        return nome;
-    }
-
-    public void setNome(String nome) {
-        this.nome = nome;
-    }
-
-    public long getCnpj() {
+ 
+    public long getCnpj (){
         return cnpj;
     }
 
@@ -35,52 +23,17 @@ public class Empresa {
         this.cnpj = cnpj;
     }
 
-    public long getCod_empresa() {
-        return cod_empresa;
-    }
-
-    public void setCod_empresa(long cod_empresa) {
-        this.cod_empresa = cod_empresa;
-    }
-    
-    public String getSenha() {
-        return senha;
-    }
-
-    public void setSenha(String senha) {
-        this.senha = senha;
-    }
-
-    public String getTelefone() {
-        return telefone;
-    }
-
-    public void setTelefone(String telefone) {
-        this.telefone = telefone;
-    }
-
-    public String getEmail() {
-        return email;
-    }
-
-    public void setEmail(String email) {
-        this.email = email;
-    }
-
-    public Empresa(String nome, long cnpj, String senha, String telefone, String email) {
-        this.nome = nome;
+    public Empresa(String nome,long cnpj, String senha, String telefone, String email) {
+        super(nome,senha,telefone,email);
         this.cnpj = cnpj;
-        this.senha = senha;
-        this.telefone = telefone;
-        this.email = email;
-        //this.cod_empresa = Utilitarios.geradorDeCodigos();
+        this.cod_empresa = Funcoes.geradorDeID(cnpj);
     }
 
     @Override
     public String toString() {
-        return "Empresa: " + nome + "\nCNPJ: " + cnpj + "\nTelefone: " + telefone + "\nE-mail=" + email;
+        return "Empresa: " + nome + "\nCNPJ: " + cnpj + "\nCódigo da Empresa: "+ this.cod_empresa + "\nTelefone: " + telefone + "\nE-mail=" + email;
     }
-
+    
     @Override
     public boolean equals(Object obj) {
         if (this == obj) {

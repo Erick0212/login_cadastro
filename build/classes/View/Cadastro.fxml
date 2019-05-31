@@ -43,8 +43,8 @@
             </TextField>
             <HBox prefHeight="37.0" prefWidth="344.0">
                <children>
-                  <CheckBox mnemonicParsing="false" style="-fx-text-fill: white;" text="Usuário" />
-                  <CheckBox mnemonicParsing="false" style="-fx-text-fill: white;" text="Empresa">
+                  <CheckBox fx:id="cbFisica" mnemonicParsing="false" style="-fx-text-fill: white;" text="Pessoa Fisíca" />
+                  <CheckBox fx:id="cbJuridica" mnemonicParsing="false" style="-fx-text-fill: white;" text="pessoa Juridíca">
                      <opaqueInsets>
                         <Insets />
                      </opaqueInsets>

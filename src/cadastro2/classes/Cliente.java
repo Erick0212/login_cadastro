@@ -5,28 +5,16 @@
  */
 package cadastro2.classes;
 
-import static cadastro2.classes.Funcoes.geradorDeCodigos;
 import java.util.Objects;
 
 /**
  *
  * @author Erick Nagoski
  */
-public class Cliente {
-    private String nome;
+public class Cliente extends Pessoa{
+   
     private long cpf;
     private long cod_cliente;
-    private String senha;
-    private String telefone;
-    private String email;
-
-    public String getNome() {
-        return nome;
-    }
-
-    public void setNome(String nome) {
-        this.nome = nome;
-    }
 
     public long getCpf() {
         return cpf;
@@ -36,51 +24,16 @@ public class Cliente {
         this.cpf = cpf;
     }
 
-    public String getSenha() {
-        return senha;
-    }
-
-    public void setSenha(String senha) {
-        this.senha = senha;
-    }
-
-    public String getTelefone() {
-        return telefone;
-    }
-
-    public void setTelefone(String telefone) {
-        this.telefone = telefone;
-    }
-
-    public String getEmail() {
-        return email;
-    }
-
-    public void setEmail(String email) {
-        this.email = email;
-    }
-
-    public long getCod_cliente() {
-        return cod_cliente;
-    }
-
-    public void setCod_cliente(long cod_cliente) {
-        this.cod_cliente = cod_cliente;
-    }
-    
-
-    public Cliente(String nome, long cpf, String senha, String telefone, String email) {
-        this.nome = nome;
+    public Cliente(String nome,long cpf, String senha, String telefone, String email) {
+       super(nome,senha,telefone,email);
         this.cpf = cpf;
-        this.senha = senha;
-        this.telefone = telefone;
-        this.email = email;
-        this.cod_cliente = geradorDeCodigos();
+        this.cod_cliente = Funcoes.geradorDeID(cpf);
+       
     }
 
     @Override
     public String toString() {
-        return "Cliente: " + nome + "\nCPF: " + cpf +"\nCódigo de cliente"+cod_cliente+ "\nTelefone: " + telefone + "\nE-mail: " + email;
+        return "Cliente: " + nome + "\nCPF: " + cpf +"\nCódigo de cliente: "+this.cod_cliente+ "\nTelefone: " + telefone + "\nE-mail: " + email;
     }
 
     @Override
