@@ -23,6 +23,10 @@
     -jfx-focus-color: -fx-secondary;
 }
 
+.label{
+    -fx-text-fill: whitesmoke;
+}
+
 
 
 

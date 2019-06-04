@@ -98,12 +98,12 @@ public class CadastroController implements Initializable {
                     Empresa e = Funcoes.criaEmpresa(nome, cpf, senha, confirma, telefone, email);
                     System.out.println(e);
               }
-            }           
+            }
+            AlertClass.AlertCadastrado();
+            ((Stage)btnConfirma.getScene().getWindow()).hide();
         }else{
             AlertClass.AlertTermos();
         }
-        ((Stage)btnConfirma.getScene().getWindow()).hide();
-        AlertClass.AlertCadastrado();
         }
     
     @FXML
