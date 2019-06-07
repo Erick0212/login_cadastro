@@ -19,14 +19,14 @@ public class cadastraProduto extends Application{
 
     @Override
     public void start(Stage stage) throws Exception {
-        Parent root = FXMLLoader.load(getClass().getResource("cadastraProduto.fxml"));
+        Parent root = FXMLLoader.load(getClass().getResource("cadastra.fxml"));
         
         Scene scene = new Scene(root);
-        stage.getIcons().add(new javafx.scene.image.Image("/Icon/Shop.png"));
+        //stage.getIcons().add(new javafx.scene.image.Image("/Icon/Shop.png"));
         stage.setScene(scene);
         stage.show();
     }
-
+    
     public static void main(String[] args) {
         launch(args);
     }
